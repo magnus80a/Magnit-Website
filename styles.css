@@ -1010,6 +1010,26 @@ section[id] {
   color: var(--ink-soft);
 }
 
+.policy section :is(ol, ul) {
+  max-width: 36em;
+  margin: 0.75rem 0 0;
+  padding-left: 1.25em;
+  color: var(--ink-soft);
+}
+
+.policy section :is(ol, ul) + p {
+  margin-top: 0.75rem;
+}
+
+.policy li + li {
+  margin-top: 0.4rem;
+}
+
+.policy li::marker {
+  color: var(--amber-ink);
+  font-weight: 600;
+}
+
 .policy a {
   overflow-wrap: anywhere;
 }
