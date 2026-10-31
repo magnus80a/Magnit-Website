@@ -20,7 +20,7 @@
 
   <main class="wrap policy">
     <h1>JoinUp Privacy Policy</h1>
-    <p class="policy-updated">Last updated: <time datetime="2026-10-15">October 15, 2026</time></p>
+    <p class="policy-updated">Last updated: <time datetime="2026-10-31">October 31, 2026</time></p>
     <p class="lead">JoinUp is made by MagnIT AB, a Swedish company that is responsible for your personal data in JoinUp. This policy explains what we collect, why, who can see it and how to delete it. We don’t sell your data, show ads or use analytics or tracking.</p>
 
     <section>
@@ -37,6 +37,7 @@
         <li><strong>Reports:</strong> when you report a game, a player, an organiser’s update or a chat message, your reason, your note if you add one, and a copy of what you reported.</li>
         <li><strong>Moderation:</strong> if we remove something you posted or suspend your account, what we did and why.</li>
         <li><strong>Sign-ins:</strong> the IP address and device information of each signed-in session, and security logs of sign-ins and other account activity.</li>
+        <li><strong>Crash reports:</strong> when the app crashes, or when saving a game, joining a game or sending a message fails unexpectedly, technical information about the failure: the app’s version and build, the time, your phone’s model, manufacturer and operating system version, and where in the code it happened. Crash reports don’t include your name, email address, a player or device ID, your messages, games or addresses, or your location.</li>
       </ul>
     </section>
 
@@ -67,8 +68,9 @@
         <li><strong>Supabase</strong> stores JoinUp’s data and handles accounts and sign-ins.</li>
         <li><strong>Resend</strong> sends sign-up confirmation and password reset emails, and emails us new reports.</li>
         <li><strong>Expo</strong> sends push notifications through Apple Push Notification service and Google Firebase Cloud Messaging. A notification shows a game’s title and what happened, such as a confirmed seat, a new date or an organiser’s update. A push notification about a chat message also shows its author’s display name and the message’s text, shortened if it’s long, so that text passes through Expo and Apple or Google on its way to other players’ phones. You can turn these off under <strong>Profile</strong>&nbsp;&gt; <strong>Notifications</strong>.</li>
+        <li><strong>Sentry</strong> stores crash reports in the EU, so we can find and fix faults. Sentry receives your IP address when a report is sent, as any internet service does, but we’ve set it not to keep your IP address, or a location worked out from it, with the report.</li>
       </ul>
-      <p>All three are based in the United States. When your data leaves the EU/EEA, it’s protected by the European Commission’s standard contractual clauses or the EU–US Data Privacy Framework.</p>
+      <p>All four are based in the United States. When your data leaves the EU/EEA, it’s protected by the European Commission’s standard contractual clauses or the EU–US Data Privacy Framework.</p>
       <p>Apple and Google handle some data under their own privacy policies. Your phone’s map service looks up the addresses organisers enter and the city names you search for in Discover, and <strong>View location</strong> opens a game’s place in Apple Maps or Google Maps. Emails you send us go to a Gmail account, so Google handles them too.</p>
     </section>
 
@@ -78,6 +80,7 @@
         <li><strong>To run JoinUp for you:</strong> your account, games, chats, notifications and emails. The legal basis is our agreement with you when you create an account.</li>
         <li><strong>To keep JoinUp secure and stop misuse:</strong> sign-in sessions and security logs. The legal basis is our legitimate interest in a secure service.</li>
         <li><strong>To keep JoinUp safe for players:</strong> your acceptance of the terms, the players you block, reports, and our removals and suspensions. We also check the text you post against a list of words that aren’t allowed. The legal basis is our agreement with you, our legitimate interest in a safe community and our duties under the EU Digital Services Act.</li>
+        <li><strong>To find and fix faults:</strong> crash reports. The legal basis is our legitimate interest in an app that works.</li>
         <li><strong>Location and push notifications:</strong> to help you find a local game and only with your permission, which you can withdraw at any time in your phone’s settings.</li>
       </ul>
     </section>
@@ -93,6 +96,7 @@
         <li>Push notification tokens: until you sign out on that device. Records of sent push notifications: 7 days, but what a push notification said is deleted once it’s sent. Push notifications that reached a phone stay there until its owner clears them.</li>
         <li>Security logs and database backups: up to 7 days.</li>
         <li>Copies of emails we sent you, at Resend: 30 days.</li>
+        <li>Crash reports, at Sentry: up to 30 days. They aren’t linked to your account, so deleting your account doesn’t remove them sooner. A report can stay in the app’s private storage on your phone until the app next starts and sends it.</li>
         <li>Emails you send us: as long as we need them to help you.</li>
       </ul>
     </section>
