@@ -56,7 +56,6 @@ function setUpRadar(radar) {
     { id: 'pay', label: 'Betalningar', q: 0, band: 1, r: 0.8 },
     { id: 'rn', label: 'React Native', q: 0, band: 2 },
     { id: 'android', label: 'Android', q: 0, band: 2 },
-    { id: 'kotlin', label: 'Kotlin/Java', q: 0, band: 2 },
     { id: 'offline', label: 'Offline', q: 0, band: 2 },
     { id: 'push', label: 'Push', q: 0, band: 2, a: 1 },
     { id: 'python', label: 'Python', q: 1, band: 0 },
@@ -166,7 +165,7 @@ function setUpRadar(radar) {
   const jobs = [...document.querySelectorAll('.job')];
   const scrollTargets = [...document.querySelectorAll('.job, .principle')];
   const IDLE = { kicker: 'Radarn', title: 'Tjugo år, ring för ring' };
-  const STILL = { kicker: 'I dag', title: 'Det jag jobbar med just nu', ids: jobs[0]?.dataset.radar.split(' ') ?? [] };
+  const STILL = { kicker: 'I dag', title: 'Det jag jobbar med just nu', ids: jobs.find((job) => job.dataset.years.endsWith('nu'))?.dataset.radar.split(' ') ?? [] };
   let live = false;
   let hovered = null;
   let current = null;
@@ -213,7 +212,7 @@ function setUpRadar(radar) {
     });
   };
   for (const blip of blips) hover(blip.g, () => describeBlip(blip));
-  for (const skill of document.querySelectorAll('.skill[data-radar]')) hover(skill, () => describe(skill));
+  for (const skill of document.querySelectorAll('.skill[data-radar], .app[data-radar], .app-row[data-radar]')) hover(skill, () => describe(skill));
 
   // Touch has no hover, so a tap toggles a blip instead.
   let pointerType = 'mouse';

@@ -20,12 +20,17 @@
   <script src="main.js" defer></script>
 </head>
 <body>
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <symbol id="icon-apple" viewBox="0 0 24 24"><path d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.913 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.338.104 2.715-.688 3.559-1.701"/></symbol>
+    <symbol id="icon-android" viewBox="0 0 24 24"><path d="M18.44 5.559c-.676 1.166-1.353 2.332-2.028 3.498-.037-.016-.074-.029-.111-.043-1.825-.696-3.484-.8-4.42-.787-1.855.019-3.354.464-4.26.82-.084-.149-1.752-3.021-2.021-3.486a1.145 1.145 0 0 0-.141-.191c-.331-.364-.905-.486-1.379-.203-.475.282-.714.9-.395 1.486 1.904 3.308 1.964 3.429 2.067 3.613-.019.011-.038.021-.057.033C2.18 11.857.614 14.389 0 17.954h24c-.613-3.611-2.205-6.203-5.093-7.939l.018-.028c.671-1.164 1.346-2.326 2.016-3.49.318-.586.08-1.204-.395-1.486-.47-.281-1.044-.161-1.377.203a1.144 1.144 0 0 0-.138.191zM7.11 12.529c.605 0 1.095.49 1.095 1.096 0 .606-.49 1.095-1.095 1.095-.605 0-1.096-.49-1.096-1.095 0-.606.49-1.096 1.096-1.096zm9.787.007c.605 0 1.096.49 1.096 1.095 0 .607-.491 1.096-1.096 1.096-.605 0-1.095-.49-1.095-1.096 0-.606.49-1.095 1.095-1.095z"/></symbol>
+  </svg>
   <a class="skip-link" href="#innehall">Hoppa till innehållet</a>
 
   <header class="site-header wrap">
     <a class="brand" href="#"><span class="brand-blip" aria-hidden="true"></span>Magnus Magnit</a>
     <nav aria-label="Huvudmeny">
       <ul class="nav-list">
+        <li><a href="#appar">Appar</a></li>
         <li><a href="#kompetens">Kompetens</a></li>
         <li><a href="#erfarenhet">Erfarenhet</a></li>
         <li><a href="#arbetssatt">Arbetssätt</a></li>
@@ -49,7 +54,7 @@
 
       <div class="radar-col">
         <figure class="radar-figure">
-          <div class="radar" id="radar" role="img" aria-label="Radar med Magnus porträtt i mitten. Runt omkring syns tekniker och områden han arbetat med, ordnade i årsringar från 2006 till i dag: från C++ och signalbehandling innerst till React Native, Kotlin och AI-agenter ytterst.">
+          <div class="radar" id="radar" role="img" aria-label="Radar med Magnus porträtt i mitten. Runt omkring syns tekniker och områden han arbetat med, ordnade i årsringar från 2006 till i dag: från C++ och signalbehandling innerst till React Native, Android och AI-agenter ytterst.">
             <svg class="radar-grid" viewBox="0 0 640 640" aria-hidden="true" focusable="false"></svg>
             <div class="radar-sweep" aria-hidden="true"></div>
             <svg class="radar-blips" viewBox="0 0 640 640" aria-hidden="true" focusable="false"></svg>
@@ -64,6 +69,74 @@
       </div>
 
       <div class="story">
+        <section class="section" id="appar" aria-labelledby="appar-title">
+          <p class="eyebrow">Appar</p>
+          <h2 id="appar-title">Appar i fickor runt om i landet.</h2>
+          <p class="section-note">Några av apparna jag har byggt eller lett utvecklingen av åt kunder och arbetsgivare.</p>
+          <ul class="app-list" data-kicker="Appar">
+            <li class="app-row" data-radar="ios rn android">
+              <h3 class="app-name">Tempus Hemma<span class="stores"><a class="store" href="https://apps.apple.com/se/app/tempus-hemma/id1181003397" aria-label="Tempus Hemma i App Store"><svg class="store-icon" aria-hidden="true" focusable="false"><use href="#icon-apple"/></svg></a><a class="store" href="https://play.google.com/store/apps/details?id=se.tempusinfo.tempushemma2" aria-label="Tempus Hemma på Google Play"><svg class="store-icon" aria-hidden="true" focusable="false"><use href="#icon-android"/></svg></a></span></h3>
+              <p class="app-meta">Tempus · 2022–2026</p>
+            </li>
+            <li class="app-row" data-radar="ios rn android">
+              <h3 class="app-name">Tempus Nu<span class="stores"><a class="store" href="https://apps.apple.com/se/app/tempus-nu/id967957216" aria-label="Tempus Nu i App Store"><svg class="store-icon" aria-hidden="true" focusable="false"><use href="#icon-apple"/></svg></a><a class="store" href="https://play.google.com/store/apps/details?id=se.tempusinfo.nuddisandroid" aria-label="Tempus Nu på Google Play"><svg class="store-icon" aria-hidden="true" focusable="false"><use href="#icon-android"/></svg></a></span></h3>
+              <p class="app-meta">Tempus · 2022–2026</p>
+            </li>
+            <li class="app-row" data-radar="ios swift">
+              <h3 class="app-name">Blocket<span class="stores"><a class="store" href="https://apps.apple.com/se/app/blocket-k%C3%B6p-s%C3%A4lj-begagnat/id323710525" aria-label="Blocket i App Store"><svg class="store-icon" aria-hidden="true" focusable="false"><use href="#icon-apple"/></svg></a></span></h3>
+              <p class="app-meta">Blocket · 2021–2022</p>
+            </li>
+            <li class="app-row" data-radar="ios swift objc">
+              <h3 class="app-name">Swedbank Private<span class="stores"><a class="store" href="https://apps.apple.com/se/app/swedbank-private/id344161302" aria-label="Swedbank Private i App Store"><svg class="store-icon" aria-hidden="true" focusable="false"><use href="#icon-apple"/></svg></a></span></h3>
+              <p class="app-meta">Swedbank · 2019–2021</p>
+            </li>
+            <li class="app-row" data-radar="ios swift lead">
+              <h3 class="app-name">ICA<span class="stores"><a class="store" href="https://apps.apple.com/se/app/ica-recept-och-erbjudanden/id458324110" aria-label="ICA i App Store"><svg class="store-icon" aria-hidden="true" focusable="false"><use href="#icon-apple"/></svg></a></span></h3>
+              <p class="app-meta">Tech lead · ICA Gruppen · 2017–2018</p>
+            </li>
+            <li class="app-row" data-radar="ios swift objc video lead">
+              <h3 class="app-name">TV4 Play<span class="stores"><a class="store" href="https://apps.apple.com/se/app/tv4-play/id413776071" aria-label="TV4 Play i App Store"><svg class="store-icon" aria-hidden="true" focusable="false"><use href="#icon-apple"/></svg></a></span></h3>
+              <p class="app-meta">Tech lead · TV4 · 2014–2017</p>
+            </li>
+            <li class="app-row" data-radar="ios objc ble">
+              <h3 class="app-name">ASSA ABLOY Mobile Access<span class="stores"><a class="store" href="https://apps.apple.com/se/app/assa-abloy-mobile-access/id793869814" aria-label="ASSA ABLOY Mobile Access i App Store"><svg class="store-icon" aria-hidden="true" focusable="false"><use href="#icon-apple"/></svg></a></span></h3>
+              <p class="app-meta">ASSA ABLOY · 2013–2014</p>
+            </li>
+            <li class="app-row" data-radar="ios objc python rest">
+              <h3 class="app-name">Projectplace<span class="stores"><a class="store" href="https://apps.apple.com/se/app/projectplace/id486344694" aria-label="Projectplace i App Store"><svg class="store-icon" aria-hidden="true" focusable="false"><use href="#icon-apple"/></svg></a></span></h3>
+              <p class="app-meta">Projectplace · 2009–2013</p>
+            </li>
+          </ul>
+          <h3 class="apps-subtitle">Egna appar</h3>
+          <p class="section-note">Från idé till release via mitt bolag MagnIT AB. De senaste är nästan helt skrivna av AI-agenter.</p>
+          <ul class="apps" data-kicker="Egna appar">
+            <li class="app" data-radar="rn ts ai">
+              <h3>Homey<span class="stores"><a class="store" href="https://apps.apple.com/se/app/homey-home-projects-docs/id6829773372" aria-label="Homey i App Store"><svg class="store-icon" aria-hidden="true" focusable="false"><use href="#icon-apple"/></svg></a><a class="store" href="https://play.google.com/store/apps/details?id=com.magnit.homey" aria-label="Homey på Google Play"><svg class="store-icon" aria-hidden="true" focusable="false"><use href="#icon-android"/></svg></a></span></h3>
+              <p>Håller ordning på projekten i ditt hem, helt utan konto.</p>
+            </li>
+            <li class="app" data-radar="rn ts ai">
+              <h3>JoinUp<span class="stores"><a class="store" href="https://apps.apple.com/se/app/joinup-local-games/id6820418664" aria-label="JoinUp i App Store"><svg class="store-icon" aria-hidden="true" focusable="false"><use href="#icon-apple"/></svg></a><a class="store" href="https://play.google.com/store/apps/details?id=com.magnit.joinup" aria-label="JoinUp på Google Play"><svg class="store-icon" aria-hidden="true" focusable="false"><use href="#icon-android"/></svg></a></span></h3>
+              <p>Samlar spelare till brädspel, kortspel och figurspel.</p>
+            </li>
+            <li class="app" data-radar="ios swift audio ai">
+              <h3>NoteBack</h3>
+              <p>Lär dig spela på gehör med direkt återkoppling från ditt eget instrument.</p>
+            </li>
+            <li class="app" data-radar="ts ai">
+              <h3><a href="https://www.iblandbandet.se/app/">iBlandbandet</a></h3>
+              <p>Reptider, chatt, noter och ljudfiler för en jazzpopensemble, som installerbar webbapp.</p>
+            </li>
+            <li class="app" data-radar="ios">
+              <h3>Nettolön<span class="stores"><a class="store" href="https://apps.apple.com/se/app/nettol%C3%B6n/id955492391" aria-label="Nettolön i App Store"><svg class="store-icon" aria-hidden="true" focusable="false"><use href="#icon-apple"/></svg></a></span></h3>
+              <p>Vad lönen kostar bolaget och vad som blir kvar efter skatt. I App Store sedan 2015.</p>
+            </li>
+            <li class="app" data-radar="ios audio">
+              <h3>Visualised Audio<span class="stores"><a class="store" href="https://apps.apple.com/se/app/visualised-audio/id1111275756" aria-label="Visualised Audio i App Store"><svg class="store-icon" aria-hidden="true" focusable="false"><use href="#icon-apple"/></svg></a></span></h3>
+              <p>Känner igen toner i realtid och visar övertonerna när du spelar.</p>
+            </li>
+          </ul>
+        </section>
+
         <section class="section" id="kompetens" aria-labelledby="kompetens-title">
           <p class="eyebrow">Kompetens</p>
           <h2 id="kompetens-title">Där jag gör mest nytta.</h2>
@@ -73,10 +146,10 @@
               <p>NoteBack, JoinUp, Homey och iBlandbandet är nästan helt skrivna av Claude och Codex. Min roll är att styra: jag formulerar spec och tickets, driver agenterna med skills för tester, felsökning och kodgranskning och granskar resultatet innan det når användarna. Det arbetssättet hjälper jag gärna andra team att komma igång med.</p>
               <ul class="tags"><li>Claude Code</li><li>Codex</li><li>Skills</li><li>Spec och tickets</li><li>TDD</li><li>Kodgranskning</li></ul>
             </div>
-            <div class="skill" data-radar="ios objc swift rn android kotlin">
+            <div class="skill" data-radar="ios objc swift rn android">
               <h3>Mobilappar, hela vägen</h3>
               <p>iOS sedan 2011 och React Native sedan 2022. Jag har byggt appar från grunden, tagit över stora kodbaser och skeppat till både App Store och Google Play.</p>
-              <ul class="tags"><li>Swift</li><li>Objective-C</li><li>React Native</li><li>Kotlin/Java</li></ul>
+              <ul class="tags"><li>Swift</li><li>Objective-C</li><li>React Native</li></ul>
             </div>
             <div class="skill" data-radar="python js rest react ts go node">
               <h3>Webb och backend</h3>
@@ -111,13 +184,13 @@
           <h2 id="erfarenhet-title">Resan hittills.</h2>
           <p class="section-note">Nyast först.</p>
           <ol class="jobs" data-kicker="Erfarenhet">
-            <li class="job" data-name="Tempus" data-years="2022–nu" data-radar="ios rn android kotlin swift ts offline push auth firebase ci perf ai">
-              <p class="job-when">2022–nu</p>
+            <li class="job" data-name="Tempus" data-years="2022–2026" data-radar="ios rn android swift ts offline push auth firebase ci perf ai">
+              <p class="job-when">2022–2026</p>
               <div class="job-body">
                 <h3 class="job-org">Tempus Information Systems</h3>
                 <p class="job-role">Senior mjukvaruutvecklare, mobil</p>
-                <p>Utvecklar och förvaltar Tempus appar för iOS och Android. Jag har drivit flytten från GWT till React Native, stora uppgraderingar av React Native och jakten på prestandaflaskhalsar. Till vardags: arkitektur, native-integrationer, inloggning, offline, push-notiser, WebView som pratar med native, releaser och felsökning i produktion.</p>
-                <ul class="tags"><li>React Native</li><li>TypeScript</li><li>Redux Toolkit</li><li>Swift</li><li>Kotlin/Java</li><li>Firebase</li><li>CI/CD</li><li>Claude</li><li>Codex</li></ul>
+                <p>Utvecklade och förvaltade Tempus appar för iOS och Android. Jag drev flytten från GWT till React Native, stora uppgraderingar av React Native och jakten på prestandaflaskhalsar. Till vardags: arkitektur, native-integrationer, inloggning, offline, push-notiser, WebView som pratar med native, releaser och felsökning i produktion.</p>
+                <ul class="tags"><li>React Native</li><li>TypeScript</li><li>Redux Toolkit</li><li>Swift</li><li>Firebase</li><li>CI/CD</li><li>Claude</li><li>Codex</li></ul>
               </div>
             </li>
             <li class="job" data-name="Egna produkter" data-years="2015–nu" data-radar="ios swift rn ts audio ai">
@@ -125,8 +198,8 @@
               <div class="job-body">
                 <h3 class="job-org">Egna produkter</h3>
                 <p class="job-role">Från idé till release · i dag via MagnIT AB</p>
-                <p><a href="https://apps.apple.com/se/app/nettol%C3%B6n/id955492391">Nettolön</a> räknar ut vad lönen kostar bolaget och vad som blir kvar efter skatt. <a href="https://apps.apple.com/se/app/visualised-audio/id1111275756">Visualised Audio</a> känner igen toner i realtid och visar övertonerna när du spelar – signalbehandling i fickan. Båda har legat i App Store i över tio år.</p>
-                <p>De senaste apparna är nästan helt skrivna av AI-agenter. NoteBack lär dig spela på gehör: den spelar en melodi, lyssnar när du spelar den på ditt instrument och ger direkt återkoppling. <a href="https://apps.apple.com/se/app/joinup-local-games/id6820418664">JoinUp</a> samlar spelare till brädspel, kortspel och figurspel. Homey håller ordning på projekten i ditt hem, helt utan konto. <a href="https://www.iblandbandet.se/app/">iBlandbandet</a> ger medlemmarna i jazzpopensemblen med samma namn reptider, chatt, noter och ljudfiler i en installerbar webbapp.</p>
+                <p>Nettolön<span class="stores"><a class="store" href="https://apps.apple.com/se/app/nettol%C3%B6n/id955492391" aria-label="Nettolön i App Store"><svg class="store-icon" aria-hidden="true" focusable="false"><use href="#icon-apple"/></svg></a></span> räknar ut vad lönen kostar bolaget och vad som blir kvar efter skatt. Visualised Audio<span class="stores"><a class="store" href="https://apps.apple.com/se/app/visualised-audio/id1111275756" aria-label="Visualised Audio i App Store"><svg class="store-icon" aria-hidden="true" focusable="false"><use href="#icon-apple"/></svg></a></span> känner igen toner i realtid och visar övertonerna när du spelar – signalbehandling i fickan. Båda har legat i App Store i över tio år.</p>
+                <p>De senaste apparna är nästan helt skrivna av AI-agenter. NoteBack lär dig spela på gehör: den spelar en melodi, lyssnar när du spelar den på ditt instrument och ger direkt återkoppling. JoinUp<span class="stores"><a class="store" href="https://apps.apple.com/se/app/joinup-local-games/id6820418664" aria-label="JoinUp i App Store"><svg class="store-icon" aria-hidden="true" focusable="false"><use href="#icon-apple"/></svg></a><a class="store" href="https://play.google.com/store/apps/details?id=com.magnit.joinup" aria-label="JoinUp på Google Play"><svg class="store-icon" aria-hidden="true" focusable="false"><use href="#icon-android"/></svg></a></span> samlar spelare till brädspel, kortspel och figurspel. Homey<span class="stores"><a class="store" href="https://apps.apple.com/se/app/homey-home-projects-docs/id6829773372" aria-label="Homey i App Store"><svg class="store-icon" aria-hidden="true" focusable="false"><use href="#icon-apple"/></svg></a><a class="store" href="https://play.google.com/store/apps/details?id=com.magnit.homey" aria-label="Homey på Google Play"><svg class="store-icon" aria-hidden="true" focusable="false"><use href="#icon-android"/></svg></a></span> håller ordning på projekten i ditt hem, helt utan konto. <a href="https://www.iblandbandet.se/app/">iBlandbandet</a> ger medlemmarna i jazzpopensemblen med samma namn reptider, chatt, noter och ljudfiler i en installerbar webbapp.</p>
                 <ul class="tags"><li>Swift</li><li>React Native</li><li>Expo</li><li>PWA</li><li>Ljudanalys</li><li>Claude Code</li><li>Codex</li></ul>
               </div>
             </li>
