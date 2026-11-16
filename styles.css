@@ -1140,3 +1140,351 @@ section[id] {
   height: 0.95em;
   fill: currentColor;
 }
+
+/* JoinUp page: the app's own colours on the site's type and layout */
+
+.joinup-page {
+  --ground: #f8f9f6;
+  --surface: #ffffff;
+  --ink: #1d3028;
+  --ink-soft: #4f5f56;
+  --ink-faint: #627168;
+  --line: #dfe5df;
+  --amber: #2e5a43;
+  --amber-ink: #2e5a43;
+  --panel: #1f3a2c;
+  --panel-ink: #f6efe3;
+  --panel-soft: #c4d6ca;
+  --panel-line: #2f5040;
+  --panel-amber: #f1cb8e;
+  --ju-hero-top: #3a6e55;
+  --ju-hero-bottom: #213f30;
+  --ju-cream: #f8f0e4;
+  --ju-mint: #a6d5b1;
+  --ju-peach: #f0cb8f;
+  --ju-deep: #1c3328;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .joinup-page {
+    --ground: #171b19;
+    --surface: #222824;
+    --ink: #edf3ee;
+    --ink-soft: #b5c2b9;
+    --ink-faint: #aab7ae;
+    --line: #3b463e;
+    --amber: #a6d5b1;
+    --amber-ink: #a6d5b1;
+    --panel: #121815;
+    --panel-line: #2c3a30;
+    --ju-hero-top: #2a4f3d;
+    --ju-hero-bottom: #16271e;
+  }
+}
+
+:root[data-theme="dark"] .joinup-page {
+  --ground: #171b19;
+  --surface: #222824;
+  --ink: #edf3ee;
+  --ink-soft: #b5c2b9;
+  --ink-faint: #aab7ae;
+  --line: #3b463e;
+  --amber: #a6d5b1;
+  --amber-ink: #a6d5b1;
+  --panel: #121815;
+  --panel-line: #2c3a30;
+  --ju-hero-top: #2a4f3d;
+  --ju-hero-bottom: #16271e;
+}
+
+.ju-hero {
+  background: linear-gradient(180deg, var(--ju-hero-top), var(--ju-hero-bottom));
+  color: var(--ju-cream);
+}
+
+.ju-hero :focus-visible {
+  outline-color: var(--ju-peach);
+}
+
+.ju-brand img {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 8px;
+}
+
+.ju-header-link {
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration-color: var(--ju-peach);
+}
+
+.ju-hero-inner {
+  display: grid;
+  gap: 2.5rem;
+  align-items: center;
+  padding-block: clamp(1.5rem, 5vw, 3.5rem) clamp(3rem, 8vw, 5.5rem);
+}
+
+@media (min-width: 900px) {
+  .ju-hero-inner {
+    grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+    gap: clamp(3rem, 6vw, 5rem);
+  }
+}
+
+.ju-hero .eyebrow {
+  color: var(--ju-peach);
+}
+
+.ju-hero h1 {
+  font-size: clamp(2.5rem, 1.6rem + 4vw, 4.6rem);
+  font-stretch: 112%;
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.022em;
+}
+
+.ju-hero .lead {
+  margin-top: 1.5rem;
+  color: var(--ju-cream);
+}
+
+.ju-store {
+  background: var(--ju-cream);
+  color: var(--ju-deep);
+}
+
+.ju-store:hover {
+  background: var(--ju-peach);
+}
+
+.ju-store .store-icon {
+  width: 1.15em;
+  height: 1.15em;
+}
+
+.ju-availability {
+  margin-top: 1rem;
+  font-size: 0.95rem;
+  color: color-mix(in srgb, var(--ju-cream) 78%, transparent);
+}
+
+.ju-table {
+  width: min(100%, 26rem);
+  margin: 0 auto;
+}
+
+.ju-table svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+
+.ju-table-top {
+  fill: var(--ju-cream);
+}
+
+.ju-table text {
+  text-anchor: middle;
+  dominant-baseline: central;
+}
+
+.ju-table-when,
+.ju-table-seats {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  fill: #627168;
+}
+
+.ju-table-name {
+  font-family: var(--font-display);
+  font-size: 28px;
+  font-stretch: 108%;
+  font-weight: 780;
+  fill: var(--ju-deep);
+}
+
+.ju-seat circle {
+  fill: var(--ju-mint);
+}
+
+.ju-seat text {
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 750;
+  fill: var(--ju-deep);
+}
+
+.ju-seat-open {
+  fill: none;
+  stroke: var(--ju-mint);
+  stroke-width: 2;
+  stroke-dasharray: 6 6;
+}
+
+.ju-join circle {
+  fill: var(--ju-peach);
+}
+
+.ju-join path {
+  stroke: var(--ju-deep);
+  stroke-width: 7;
+  stroke-linecap: round;
+}
+
+.ju-join-halo {
+  fill: none;
+  stroke: var(--ju-peach);
+  stroke-width: 2;
+  opacity: 0;
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: ju-join 3.2s ease-out infinite;
+}
+
+@keyframes ju-join {
+  0% {
+    opacity: 0.8;
+    transform: scale(1);
+  }
+
+  45%,
+  100% {
+    opacity: 0;
+    transform: scale(1.7);
+  }
+}
+
+.ju-section {
+  max-width: calc(64rem + 2 * var(--gutter));
+  padding-top: clamp(3.5rem, 9vw, 6rem);
+}
+
+.ju-section h2 {
+  font-size: clamp(1.9rem, 1.4rem + 2vw, 2.75rem);
+  font-stretch: 108%;
+  font-weight: 780;
+  line-height: 1.05;
+  letter-spacing: -0.015em;
+}
+
+.ju-steps,
+.ju-features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr));
+  gap: 2rem 2.5rem;
+  margin: 2rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.ju-steps {
+  counter-reset: step;
+}
+
+.ju-steps li {
+  counter-increment: step;
+  padding-top: 1rem;
+  border-top: 1.5px solid var(--amber);
+}
+
+.ju-steps li::before {
+  content: "0" counter(step);
+  display: block;
+  margin-bottom: 0.5rem;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  color: var(--amber-ink);
+}
+
+.ju-features li {
+  padding-top: 1rem;
+  border-top: 1.5px solid var(--line);
+}
+
+.ju-steps h3,
+.ju-features h3 {
+  margin-bottom: 0.4rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.ju-steps p,
+.ju-features p {
+  color: var(--ink-soft);
+}
+
+.ju-screens {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: min(68vw, 15rem);
+  gap: 1.25rem;
+  margin: 2rem calc(-1 * var(--gutter)) 0;
+  padding: 0.5rem var(--gutter) 1rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-padding-inline: var(--gutter);
+  list-style: none;
+}
+
+@media (min-width: 900px) {
+  .ju-screens {
+    grid-auto-flow: row;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 2rem;
+    margin-inline: 0;
+    padding-inline: 0;
+    overflow: visible;
+  }
+}
+
+.ju-screens li {
+  scroll-snap-align: start;
+}
+
+.ju-screens img {
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--line);
+  border-radius: 1.75rem;
+  background: #f8f9f6;
+  box-shadow: 0 12px 32px -18px rgb(29 48 40 / 0.45);
+}
+
+.ju-screens p {
+  margin-top: 0.85rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.ju-privacy {
+  padding-bottom: clamp(4rem, 10vw, 7rem);
+}
+
+.ju-privacy p {
+  max-width: 34em;
+  margin-top: 1rem;
+  font-size: 1.15rem;
+  color: var(--ink-soft);
+}
+
+.ju-footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.5rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ju-join-halo {
+    animation: none;
+  }
+}
