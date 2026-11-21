@@ -1773,3 +1773,284 @@ section[id] {
     animation: none;
   }
 }
+
+/* Pile of Progress page: the app's navy icon ground, its blue accent and its red-to-green Stage colours */
+
+.pop-page {
+  --ground: #f5f4f1;
+  --surface: #ffffff;
+  --ink: #1e1f24;
+  --ink-soft: #5d6069;
+  --ink-faint: #5d6069;
+  --line: #dddbd5;
+  --amber: #2f5d8a;
+  --amber-ink: #2f5d8a;
+  --pop-hero-top: #26334a;
+  --pop-hero-bottom: #161d2b;
+  --pop-ink: #ecedef;
+  --pop-blue: #8fb8e6;
+  --pop-deep: #121316;
+  --pop-card: #1d1f23;
+  --pop-row: #26292e;
+  --pop-red: #c62828;
+  --pop-green: #2e7d32;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .pop-page {
+    --ground: #121316;
+    --surface: #1d1f23;
+    --ink: #ecedef;
+    --ink-soft: #a4a8b1;
+    --ink-faint: #a4a8b1;
+    --line: #33363c;
+    --amber: #8fb8e6;
+    --amber-ink: #8fb8e6;
+    --pop-hero-top: #1e283a;
+    --pop-hero-bottom: #121316;
+  }
+}
+
+:root[data-theme="dark"] .pop-page {
+  --ground: #121316;
+  --surface: #1d1f23;
+  --ink: #ecedef;
+  --ink-soft: #a4a8b1;
+  --ink-faint: #a4a8b1;
+  --line: #33363c;
+  --amber: #8fb8e6;
+  --amber-ink: #8fb8e6;
+  --pop-hero-top: #1e283a;
+  --pop-hero-bottom: #121316;
+}
+
+.pop-page {
+  background: var(--ground);
+}
+
+.pop-hero {
+  background: linear-gradient(180deg, var(--pop-hero-top), var(--pop-hero-bottom));
+  color: var(--pop-ink);
+}
+
+.pop-hero :focus-visible {
+  outline-color: var(--pop-blue);
+}
+
+.pop-brand img {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 8px;
+}
+
+.pop-header-link {
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration-color: var(--pop-blue);
+}
+
+.pop-hero-inner {
+  display: grid;
+  gap: 2.5rem;
+  align-items: center;
+  padding-block: clamp(1.5rem, 5vw, 3.5rem) clamp(3rem, 8vw, 5.5rem);
+}
+
+@media (min-width: 900px) {
+  .pop-hero-inner {
+    grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+    gap: clamp(3rem, 6vw, 5rem);
+  }
+}
+
+.pop-hero .eyebrow {
+  color: var(--pop-blue);
+}
+
+.pop-hero h1 {
+  font-size: clamp(2.4rem, 1.5rem + 3.8vw, 4.3rem);
+  font-stretch: 112%;
+  font-weight: 800;
+  line-height: 1.02;
+  letter-spacing: -0.022em;
+}
+
+.pop-hero .lead {
+  margin-top: 1.5rem;
+  color: var(--pop-ink);
+}
+
+.pop-store {
+  background: var(--pop-blue);
+  color: var(--pop-deep);
+}
+
+.pop-store:hover {
+  background: var(--pop-ink);
+}
+
+.pop-store .store-icon {
+  width: 1.15em;
+  height: 1.15em;
+}
+
+.pop-availability {
+  margin-top: 1rem;
+  font-size: 0.95rem;
+  color: color-mix(in srgb, var(--pop-ink) 78%, transparent);
+}
+
+.pop-card {
+  width: min(100%, 26rem);
+  margin: 0 auto;
+}
+
+.pop-card svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  filter: drop-shadow(0 18px 40px rgb(0 0 0 / 0.35));
+}
+
+.pop-card text {
+  font-family: var(--font-body);
+  dominant-baseline: central;
+}
+
+.pop-card-bg {
+  fill: var(--pop-deep);
+}
+
+.pop-card-name {
+  font-size: 17px;
+  font-weight: 700;
+  text-anchor: middle;
+  fill: var(--pop-ink);
+}
+
+.pop-card-big {
+  font-family: var(--font-display);
+  font-size: 30px;
+  font-weight: 800;
+  text-anchor: middle;
+  fill: #ffffff;
+}
+
+.pop-card-small {
+  font-size: 13px;
+  font-weight: 600;
+  text-anchor: middle;
+  fill: #ffffff;
+}
+
+.pop-stage-row {
+  fill: var(--pop-row);
+}
+
+.pop-stage-edge {
+  fill: var(--stage);
+}
+
+.pop-stage-count {
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 800;
+  text-anchor: middle;
+  fill: var(--pop-ink);
+}
+
+.pop-stage-name {
+  font-size: 16px;
+  font-weight: 600;
+  fill: var(--pop-ink);
+}
+
+.pop-stage-share {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  text-anchor: end;
+  fill: #a4a8b1;
+}
+
+.pop-section {
+  max-width: calc(64rem + 2 * var(--gutter));
+  padding-top: clamp(3.5rem, 9vw, 6rem);
+}
+
+.pop-section h2 {
+  font-size: clamp(1.9rem, 1.4rem + 2vw, 2.75rem);
+  font-stretch: 108%;
+  font-weight: 780;
+  line-height: 1.05;
+  letter-spacing: -0.015em;
+}
+
+.pop-steps,
+.pop-features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr));
+  gap: 2rem 2.5rem;
+  margin: 2rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.pop-steps {
+  counter-reset: step;
+}
+
+.pop-steps li {
+  counter-increment: step;
+  padding-top: 1rem;
+  border-top: 3px solid;
+  border-image: linear-gradient(90deg, var(--pop-red), var(--pop-green)) 1;
+}
+
+.pop-steps li::before {
+  content: "0" counter(step);
+  display: block;
+  margin-bottom: 0.5rem;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  color: var(--amber-ink);
+}
+
+.pop-features li {
+  padding-top: 1rem;
+  border-top: 1.5px solid var(--line);
+}
+
+.pop-steps h3,
+.pop-features h3 {
+  margin-bottom: 0.4rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.pop-steps p,
+.pop-features p {
+  color: var(--ink-soft);
+}
+
+.pop-privacy {
+  padding-bottom: clamp(4rem, 10vw, 7rem);
+}
+
+.pop-privacy p {
+  max-width: 34em;
+  margin-top: 1rem;
+  font-size: 1.15rem;
+  color: var(--ink-soft);
+}
+
+.pop-footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.5rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
