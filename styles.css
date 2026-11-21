@@ -1488,3 +1488,288 @@ section[id] {
     animation: none;
   }
 }
+
+/* Repa page: the app is dark only, so the page is too, in the app's teal and amber */
+
+.repa-page {
+  --ground: #0b0e10;
+  --surface: #15181c;
+  --ink: #edf3f3;
+  --ink-soft: #a9b6b8;
+  --ink-faint: #8d9a9c;
+  --line: #262d31;
+  --amber: #29c7b8;
+  --amber-ink: #5fe0d4;
+  --panel: #0b0e10;
+  --panel-line: #262d31;
+  --rp-teal: #29c7b8;
+  --rp-pale-teal: #9efaf2;
+  --rp-amber: #fac959;
+  --rp-slate: #5e7d82;
+  --rp-hero-top: #14211f;
+  color-scheme: dark;
+  background: var(--ground);
+  color: var(--ink);
+}
+
+.rp-hero {
+  background:
+    radial-gradient(60rem 30rem at 85% 0%, rgb(41 199 184 / 0.14), transparent 70%),
+    linear-gradient(180deg, var(--rp-hero-top), var(--ground));
+}
+
+.rp-hero :focus-visible {
+  outline-color: var(--rp-amber);
+}
+
+.rp-brand img {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 8px;
+}
+
+.rp-header-link {
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration-color: var(--rp-amber);
+}
+
+.rp-hero-inner {
+  display: grid;
+  gap: 2.5rem;
+  align-items: center;
+  padding-block: clamp(1.5rem, 5vw, 3.5rem) clamp(3rem, 8vw, 5.5rem);
+}
+
+@media (min-width: 900px) {
+  .rp-hero-inner {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: clamp(3rem, 6vw, 5rem);
+  }
+}
+
+.rp-hero .eyebrow {
+  color: var(--rp-amber);
+}
+
+.rp-hero h1 {
+  font-size: clamp(2.5rem, 1.6rem + 4vw, 4.6rem);
+  font-stretch: 112%;
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.022em;
+}
+
+.rp-hero .lead {
+  margin-top: 1.5rem;
+  color: var(--ink);
+}
+
+.rp-store {
+  background: var(--rp-teal);
+  color: #0b0e10;
+}
+
+.rp-store:hover {
+  background: var(--rp-pale-teal);
+}
+
+.rp-store .store-icon {
+  width: 1.15em;
+  height: 1.15em;
+}
+
+.rp-availability {
+  margin-top: 1rem;
+  font-size: 0.95rem;
+  color: var(--ink-soft);
+}
+
+.rp-player {
+  width: min(100%, 30rem);
+  margin: 0 auto;
+}
+
+.rp-player svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.rp-bar {
+  fill: var(--rp-teal);
+  opacity: 0.55;
+}
+
+.rp-bar-loop {
+  fill: var(--rp-pale-teal);
+}
+
+.rp-bar-skip {
+  fill: var(--rp-slate);
+  opacity: 0.45;
+}
+
+.rp-loop {
+  fill: rgb(250 201 89 / 0.12);
+}
+
+.rp-bracket {
+  fill: none;
+  stroke: var(--rp-amber);
+  stroke-width: 4;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.rp-skip {
+  fill: none;
+  stroke: var(--rp-slate);
+  stroke-width: 1.5;
+  stroke-dasharray: 5 5;
+}
+
+.rp-mark path {
+  stroke: var(--rp-amber);
+  stroke-width: 2;
+}
+
+.rp-mark text {
+  font-family: var(--font-display);
+  font-size: 15px;
+  font-weight: 700;
+  fill: var(--ink);
+}
+
+.rp-mark-skip path {
+  stroke: var(--rp-slate);
+}
+
+.rp-mark-skip text {
+  fill: var(--ink-faint);
+  text-decoration: line-through;
+}
+
+.rp-playhead {
+  stroke: #ffffff;
+  stroke-width: 2.5;
+  stroke-linecap: round;
+  animation: rp-loop 4s linear infinite;
+}
+
+@keyframes rp-loop {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(116px);
+  }
+}
+
+.rp-readout {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  fill: var(--ink-faint);
+}
+
+.rp-readout-value {
+  fill: var(--rp-amber);
+}
+
+.rp-section {
+  max-width: calc(64rem + 2 * var(--gutter));
+  padding-top: clamp(3.5rem, 9vw, 6rem);
+}
+
+.rp-section h2 {
+  font-size: clamp(1.9rem, 1.4rem + 2vw, 2.75rem);
+  font-stretch: 108%;
+  font-weight: 780;
+  line-height: 1.05;
+  letter-spacing: -0.015em;
+}
+
+.rp-steps,
+.rp-features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr));
+  gap: 2rem 2.5rem;
+  margin: 2rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.rp-steps {
+  counter-reset: step;
+}
+
+.rp-steps li {
+  counter-increment: step;
+  padding-top: 1rem;
+  border-top: 1.5px solid var(--rp-amber);
+}
+
+.rp-steps li::before {
+  content: "0" counter(step);
+  display: block;
+  margin-bottom: 0.5rem;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  color: var(--rp-amber);
+}
+
+.rp-features li {
+  padding-top: 1rem;
+  border-top: 1.5px solid var(--line);
+}
+
+.rp-steps h3,
+.rp-features h3 {
+  margin-bottom: 0.4rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.rp-steps p,
+.rp-features p {
+  color: var(--ink-soft);
+}
+
+.rp-note {
+  max-width: 40em;
+  margin-top: 2.5rem;
+  font-size: 0.95rem;
+  color: var(--ink-faint);
+}
+
+.rp-privacy {
+  padding-bottom: clamp(4rem, 10vw, 7rem);
+}
+
+.rp-privacy p {
+  max-width: 34em;
+  margin-top: 1rem;
+  font-size: 1.15rem;
+  color: var(--ink-soft);
+}
+
+.rp-footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.5rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .rp-playhead {
+    animation: none;
+  }
+}
