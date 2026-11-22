@@ -30,7 +30,7 @@
         <li><strong>Your workflow:</strong> the names and order of your stages.</li>
         <li><strong>Notes:</strong> the text you write on a collection, army or unit, such as a paint scheme.</li>
         <li><strong>Photos:</strong> the one photo you can give each unit.</li>
-        <li><strong>The purchase:</strong> whether the unlock has been bought, so the app stays unlocked without a connection.</li>
+        <li><strong>The purchase:</strong> that the unlock has been bought, so the app stays unlocked without a connection. On Android this is kept in the app’s storage, with the date if Google Play no longer lists the purchase. On iPhone it’s kept in the phone’s keychain.</li>
       </ul>
       <p>All of this is kept on your device, where other apps can’t read it. We can’t see it, and Pile of Progress doesn’t send it anywhere. The app works without an internet connection, except for buying or restoring the unlock.</p>
     </section>
@@ -44,13 +44,13 @@
     <section>
       <h2>The purchase</h2>
       <p>Pile of Progress is free to download and holds up to 10 model types, which this policy calls units. One purchase, Unlock the whole pile, removes that limit. It is sold through the App Store or Google Play, under <a href="https://www.apple.com/legal/privacy/">Apple’s</a> or <a href="https://policies.google.com/privacy">Google’s</a> privacy policy. The app never sees your name, email address or payment details.</p>
-      <p>To show the price, to buy or restore, and to check whether you have bought the unlock, the app asks the store. On iPhone it does this through Apple’s StoreKit, which is part of iOS. On Android it does it through Google’s Play Billing Library, which is part of the app. The app reaches both through expo-iap, an open-source library that runs on your device and, as we use it, sends nothing of its own.</p>
+      <p>The app asks the store for the price, to buy or restore the unlock, and whether you have bought it. It asks whether you have bought it each time you open the app or come back to it. If your pile is unlimited because you used the app before it had the limit, the app doesn’t ask the store anything. On iPhone it does this through Apple’s StoreKit, which is part of iOS. On Android it does it through Google’s Play Billing Library, which is part of the app. The app reaches both through expo-iap, an open-source library that runs on your device and, as we use it, sends nothing of its own.</p>
       <p>On Android, Google’s Play Billing Library also sends Google a technical log over an encrypted connection: how its requests to Google Play went, the app and library versions, and details of the device such as its model, memory, Android version, language, time zone, network type and mobile operator. It can’t be turned off in the app. It contains nothing you add to Pile of Progress, and we don’t receive it.</p>
     </section>
 
     <section>
       <h2>Device backups</h2>
-      <p>What you add to Pile of Progress, including your photos, can be part of your device’s own backup: iCloud on iPhone, and Google’s backup on Android. If you’ve turned these backups on, copies are stored in your Apple or Google account under <a href="https://www.apple.com/legal/privacy/">Apple’s</a> or <a href="https://policies.google.com/privacy">Google’s</a> privacy policy. We have no access to them. You can turn these backups off in your device’s settings. Android backs up at most 25 MB per app; above that, none of Pile of Progress’s data is backed up.</p>
+      <p>What you add to Pile of Progress, including your photos, can be part of your device’s own backup: iCloud on iPhone, and Google’s backup on Android. If you’ve turned these backups on, copies are stored in your Apple or Google account under <a href="https://www.apple.com/legal/privacy/">Apple’s</a> or <a href="https://policies.google.com/privacy">Google’s</a> privacy policy. We have no access to them. You can turn these backups off in your device’s settings. What the app keeps about the purchase isn’t in Android’s backup. An iPhone’s backup can hold it, but it only comes back on that same iPhone. Android backs up at most 25 MB per app; above that, none of Pile of Progress’s data is backed up.</p>
     </section>
 
     <section>
@@ -66,6 +66,7 @@
     <section>
       <h2>Data retention and deletion</h2>
       <p>Your data stays on your device until you delete it. In the app, you can remove a unit’s photo, or delete a unit, an army or a collection with everything in it, photos included. Deleting the app removes everything you added from your device. We can’t delete it for you or get it back, because we don’t have it.</p>
+      <p>On iPhone, what the app keeps about the purchase may remain in the keychain after you delete the app. It says only that the unlock has been bought, with nothing about you or your pile. If you install the app again on that iPhone, it may open unlocked, also with another Apple Account.</p>
       <p>Copies in your iCloud or Google backup are kept and deleted according to those services, and you can delete them there.</p>
     </section>
 
@@ -76,7 +77,7 @@
 
     <section>
       <h2>Security</h2>
-      <p>Pile of Progress’s data is kept in app storage that other apps can’t read, and your device’s lock protects it. The app doesn’t add a lock or encryption of its own, so anyone who can unlock your device can open it.</p>
+      <p>Pile of Progress’s data is kept in app storage, and on iPhone in the keychain, where other apps can’t read it, and your device’s lock protects it. The app doesn’t add a lock or encryption of its own, so anyone who can unlock your device can open it.</p>
     </section>
 
     <section>
