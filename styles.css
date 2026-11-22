@@ -2039,6 +2039,7 @@ section[id] {
   padding-bottom: clamp(4rem, 10vw, 7rem);
 }
 
+.pop-price p,
 .pop-privacy p {
   max-width: 34em;
   margin-top: 1rem;
