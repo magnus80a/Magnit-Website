@@ -2055,3 +2055,382 @@ section[id] {
   padding: 0;
   list-style: none;
 }
+
+/* Homey page: the icon's terracotta for the hero, and the app's own cream and warm-dark palettes */
+
+.hy-page {
+  --ground: #fbf6ef;
+  --surface: #ffffff;
+  --ink: #2b211c;
+  --ink-soft: #6b5f56;
+  --ink-faint: #6b5f56;
+  --line: #e6dccf;
+  --amber: #b3452f;
+  --amber-ink: #b3452f;
+  --hy-hero-top: #b3452f;
+  --hy-hero-bottom: #8e3523;
+  --hy-cream: #fff4e6;
+  --hy-peach: #ffe7d6;
+  --hy-deep: #8e3523;
+  --hy-app-bg: #fbf6ef;
+  --hy-app-edge: transparent;
+  --hy-footer: #2b211c;
+  --hy-footer-ink: #d9cabd;
+  --hy-footer-accent: #ee8b6e;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .hy-page {
+    --ground: #1a1411;
+    --surface: #271f1b;
+    --ink: #f4ebe1;
+    --ink-soft: #b3a496;
+    --ink-faint: #b3a496;
+    --line: #3f342d;
+    --amber: #ee8b6e;
+    --amber-ink: #ee8b6e;
+    --hy-hero-top: #6e2a1c;
+    --hy-hero-bottom: #1a1411;
+    --hy-app-bg: #1a1411;
+    --hy-app-edge: #3f342d;
+    --hy-footer: #120d0b;
+  }
+}
+
+:root[data-theme="dark"] .hy-page {
+  --ground: #1a1411;
+  --surface: #271f1b;
+  --ink: #f4ebe1;
+  --ink-soft: #b3a496;
+  --ink-faint: #b3a496;
+  --line: #3f342d;
+  --amber: #ee8b6e;
+  --amber-ink: #ee8b6e;
+  --hy-hero-top: #6e2a1c;
+  --hy-hero-bottom: #1a1411;
+  --hy-app-bg: #1a1411;
+  --hy-app-edge: #3f342d;
+  --hy-footer: #120d0b;
+}
+
+.hy-page {
+  background: var(--ground);
+}
+
+.hy-hero {
+  background: linear-gradient(180deg, var(--hy-hero-top), var(--hy-hero-bottom));
+  color: var(--hy-cream);
+}
+
+.hy-hero :focus-visible {
+  outline-color: var(--hy-cream);
+}
+
+.hy-brand img {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 8px;
+}
+
+.hy-header-link {
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration-color: var(--hy-peach);
+}
+
+.hy-hero-inner {
+  display: grid;
+  gap: 2.5rem;
+  align-items: center;
+  padding-block: clamp(1.5rem, 5vw, 3.5rem) clamp(3rem, 8vw, 5.5rem);
+}
+
+@media (min-width: 900px) {
+  .hy-hero-inner {
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+    gap: clamp(3rem, 6vw, 5rem);
+  }
+}
+
+.hy-hero .eyebrow {
+  color: var(--hy-peach);
+}
+
+.hy-hero h1 {
+  font-size: clamp(2.4rem, 1.5rem + 3.8vw, 4.3rem);
+  font-stretch: 112%;
+  font-weight: 800;
+  line-height: 1.02;
+  letter-spacing: -0.022em;
+}
+
+.hy-hero .lead {
+  margin-top: 1.5rem;
+  color: var(--hy-cream);
+}
+
+.hy-store {
+  background: var(--hy-cream);
+  color: var(--hy-deep);
+}
+
+.hy-store:hover {
+  background: #ffffff;
+}
+
+.hy-store .store-icon {
+  width: 1.15em;
+  height: 1.15em;
+}
+
+.hy-availability {
+  margin-top: 1rem;
+  font-size: 0.95rem;
+  color: color-mix(in srgb, var(--hy-cream) 85%, transparent);
+}
+
+/* The hero's drawing of a Home's timeline, in the app's palette for the appearance in use */
+
+.hy-screen {
+  width: min(100%, 28rem);
+  margin: 0 auto;
+}
+
+.hy-screen svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+
+.hy-screen text {
+  font-family: var(--font-body);
+  dominant-baseline: central;
+}
+
+.hy-screen-bg {
+  fill: var(--hy-app-bg);
+  stroke: var(--hy-app-edge);
+  stroke-width: 1.5;
+  filter: drop-shadow(0 18px 40px rgb(40 12 4 / 0.35));
+}
+
+.hy-screen-back {
+  font-size: 15px;
+  font-weight: 600;
+  fill: var(--amber);
+}
+
+.hy-screen-plus {
+  stroke: var(--amber);
+  stroke-width: 2.5;
+  stroke-linecap: round;
+}
+
+.hy-screen-name {
+  font-family: var(--font-display);
+  font-size: 28px;
+  font-stretch: 108%;
+  font-weight: 800;
+  fill: var(--ink);
+}
+
+.hy-screen-year {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  fill: var(--ink-soft);
+}
+
+.hy-row rect {
+  fill: var(--surface);
+  stroke: var(--line);
+}
+
+.hy-row-title {
+  font-size: 16px;
+  font-weight: 700;
+  fill: var(--ink);
+}
+
+.hy-row-sub {
+  font-size: 13.5px;
+  fill: var(--ink-soft);
+}
+
+.hy-row-chevron {
+  fill: none;
+  stroke: var(--ink-soft);
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.hy-tabs-line {
+  stroke: var(--line);
+}
+
+.hy-tab-mark {
+  stroke: var(--amber);
+  stroke-width: 3;
+}
+
+.hy-tab {
+  font-size: 15px;
+  font-weight: 600;
+  text-anchor: middle;
+  fill: var(--ink-soft);
+}
+
+.hy-tab-on {
+  fill: var(--amber);
+}
+
+.hy-receipt rect {
+  fill: #fffdf8;
+  stroke: #e6dccf;
+  filter: drop-shadow(0 10px 22px rgb(40 12 4 / 0.3));
+}
+
+.hy-receipt-firm {
+  font-family: var(--font-display);
+  font-size: 14px;
+  font-stretch: 115%;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  fill: #2b211c;
+}
+
+.hy-receipt-small {
+  font-size: 11px;
+  fill: #6b5f56;
+}
+
+.hy-receipt-line {
+  stroke: #e2d7ca;
+  stroke-width: 5;
+  stroke-linecap: round;
+}
+
+.hy-receipt-rule {
+  stroke: #2b211c;
+  stroke-dasharray: 3 3;
+}
+
+.hy-receipt-total {
+  font-family: var(--font-mono);
+  font-size: 16px;
+  font-weight: 600;
+  text-anchor: end;
+  fill: #2b211c;
+}
+
+/* Sections */
+
+.hy-section {
+  max-width: calc(64rem + 2 * var(--gutter));
+  padding-top: clamp(3.5rem, 9vw, 6rem);
+}
+
+.hy-section h2 {
+  font-size: clamp(1.9rem, 1.4rem + 2vw, 2.75rem);
+  font-stretch: 108%;
+  font-weight: 780;
+  line-height: 1.05;
+  letter-spacing: -0.015em;
+}
+
+.hy-steps,
+.hy-features,
+.hy-moments {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr));
+  gap: 2rem 2.5rem;
+  margin: 2rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.hy-steps {
+  counter-reset: step;
+}
+
+.hy-steps li {
+  counter-increment: step;
+  padding-top: 1rem;
+  border-top: 3px solid var(--amber);
+}
+
+.hy-steps li::before {
+  content: "0" counter(step);
+  display: block;
+  margin-bottom: 0.5rem;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  color: var(--amber-ink);
+}
+
+.hy-features li {
+  padding-top: 1rem;
+  border-top: 1.5px solid var(--line);
+}
+
+.hy-moments {
+  gap: 1rem;
+}
+
+.hy-moments li {
+  padding: 1.4rem 1.5rem 1.5rem;
+  border: 1.5px solid var(--line);
+  border-left: 4px solid var(--amber);
+  border-radius: 12px;
+  background: var(--surface);
+}
+
+.hy-steps h3,
+.hy-features h3,
+.hy-moments h3 {
+  margin-bottom: 0.4rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.hy-steps p,
+.hy-features p,
+.hy-moments p {
+  color: var(--ink-soft);
+}
+
+.hy-privacy {
+  padding-bottom: clamp(4rem, 10vw, 7rem);
+}
+
+.hy-privacy p {
+  max-width: 34em;
+  margin-top: 1rem;
+  font-size: 1.15rem;
+  color: var(--ink-soft);
+}
+
+.hy-footer {
+  border-top-color: var(--hy-footer);
+  background: var(--hy-footer);
+  color: var(--hy-footer-ink);
+}
+
+.hy-footer a {
+  text-decoration-color: var(--hy-footer-accent);
+}
+
+.hy-footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.5rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
